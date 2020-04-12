@@ -16,10 +16,15 @@
     {{ fulltext }}
 
     <h2>Word Count:</h2>
-    {% for word, counttotal in sortedwords %}
-        {{ word }} - {{ counttotal }}
-        <br />
-    {% endfor %}
-
+    <table>
+        <tbody>
+        {% for word, counttotal in sortedwords %}
+            <tr>
+                <td>{{ word }}</td>
+                <td>{{ counttotal }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
